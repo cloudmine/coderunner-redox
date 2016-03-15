@@ -9,8 +9,7 @@
  * This can be more expressive, for example, you can use `fs` to
  * read all snippets in a directory and set them to your `module.exports`.
  */
-var BasicSnippet = require('./lib/basic_snippet');
-var AsyncSnippet = require('./lib/async_snippet');
+
 var RedoxSnippet = require('./lib/redox_snippet');
 var CloudMineNode = require('cloudmine-servercode');
 // Require any other node module you want...
@@ -20,8 +19,6 @@ var CloudMineNode = require('cloudmine-servercode');
  * or the server won't be able to read in the exports.
  */
 module.exports = {
-  basic: BasicSnippet,
-  async: AsyncSnippet,
   redox: RedoxSnippet
 };
 
