@@ -5,7 +5,7 @@
 - [Example CloudMine Server Code Snippet](#example-cloudmine-server-code-snippet)
   - [Getting Started](#getting-started)
   - [Running Snippets Locally](#running-snippets-locally)
-      - [A Note on `package.json`](#a-note-on-`package.json`)
+      - [A Note on `package.json`](#a-note-on-package.json)
       - [Obtain a Listing of Available Snippets](#obtain-a-listing-of-available-snippets)
       - [Executing a Snippet](#executing-a-snippet)
 - [Implementation Notes](#implementation-notes)
@@ -42,7 +42,7 @@ In order to run your CloudMine Snippets locally, please follow the below instruc
 3. Next, run `node index.js` to start the server.
 4. Finally, `curl`, `wget`, or use your favorite method of running HTTP commands using the below examples.
 
-#### A Note on `package.json`
+#### A Note on package.json
 
 The only dependency necessary for your CodeRunner project to run on CloudMine is the `cloudmine-servercode` module. Make sure that this dependency is setup correctly within your `package.json`:
 
