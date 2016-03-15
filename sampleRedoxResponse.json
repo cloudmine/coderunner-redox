@@ -1,0 +1,612 @@
+{
+  "Header": {
+    "Document": {
+      "Locale": "US",
+      "Title": "Community Health and Hospitals: Health Summary",
+      "DateTime": "2012-09-12T00:00:00.000Z",
+      "Type": "Summarization of Episode Note"
+    },
+    "Patient": {
+      "Identifiers": [
+        {
+          "ID": "1",
+          "Type": "2.16.840.1.113883.4.6"
+        }
+      ],
+      "Demographics": {
+        "SSN": "123-101-5230",
+        "FirstName": "Myra",
+        "LastName": "Jones",
+        "DOB": "1947-05-01T00:00:00.000Z",
+        "Sex": "Female",
+        "Address": {
+          "StreetAddress": "1357 Amber Drive",
+          "City": "Beaverton",
+          "State": "OR",
+          "Country": "US",
+          "ZIP": "97006"
+        },
+        "PhoneNumber": {
+          "Home": "tel:(816)276-6909"
+        },
+        "Race": {
+          "Code": "2106-3",
+          "CodeSystem": "2.16.840.1.113883.6.238",
+          "CodeSystemName": "Race and Ethnicity - CDC",
+          "Name": "White"
+        },
+        "Ethnicity": {
+          "Code": "2186-5",
+          "CodeSystem": "2.16.840.1.113883.6.238",
+          "CodeSystemName": "Race and Ethnicity - CDC",
+          "Name": "Not Hispanic or Latino"
+        },
+        "Religion": {
+          "Code": "1013",
+          "CodeSystem": "2.16.840.1.113883.5.1076",
+          "CodeSystemName": "HL7 Religious Affiliation ",
+          "Name": "Christian (non-Catholic, non-specific)"
+        },
+        "MaritalStatus": {
+          "Code": "M",
+          "CodeSystem": "2.16.840.1.113883.5.2",
+          "CodeSystemName": "MaritalStatusCode",
+          "Name": "Married"
+        }
+      }
+    }
+  },
+  "AllergyText": "<table border=\"1\" width=\"100%\"><thead><tr><th>Substance</th><th>Reaction</th><th>Severity</th><th>Status</th></tr></thead><tbody><tr><td>Penicillin G benzathine</td><td><content ID=\"reaction1\">Hives</content></td><td><content ID=\"severity1\">Moderate to severe</content></td><td>Inactive</td></tr><tr><td>Codeine</td><td><content ID=\"reaction2\">Shortness of Breath</content></td><td><content ID=\"severity2\">Moderate</content></td><td>Active</td></tr><tr><td>Aspirin</td><td><content ID=\"reaction3\">Hives</content></td><td><content ID=\"severity3\">Mild to moderate</content></td><td>Active</td></tr></tbody></table>",
+  "Allergies": [
+    {
+      "Type": {
+        "Code": "419511003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Propensity to adverse reaction to drug"
+      },
+      "Substance": {
+        "Code": "7982",
+        "CodeSystem": "2.16.840.1.113883.6.88",
+        "CodeSystemName": "RxNorm",
+        "Name": "Penicillin G benzathine"
+      },
+      "Reaction": {
+        "Code": "247472004",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Hives"
+      },
+      "Severity": {
+        "Code": "371924009",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Moderate to severe"
+      },
+      "Status": {
+        "Code": "73425007",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Inactive"
+      }
+    },
+    {
+      "Type": {
+        "Code": "419511003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Propensity to adverse reaction to drug"
+      },
+      "Substance": {
+        "Code": "2670",
+        "CodeSystem": "2.16.840.1.113883.6.88",
+        "CodeSystemName": "RxNorm",
+        "Name": "Codeine"
+      },
+      "Reaction": {
+        "Code": "267036007",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Shortness of Breath"
+      },
+      "Severity": {
+        "Code": "6736007",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Moderate"
+      },
+      "Status": {
+        "Code": "55561003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Active"
+      }
+    },
+    {
+      "Type": {
+        "Code": "419511003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Propensity to adverse reaction to drug"
+      },
+      "Substance": {
+        "Code": "1191",
+        "CodeSystem": "2.16.840.1.113883.6.88",
+        "CodeSystemName": "RxNorm",
+        "Name": "Aspirin"
+      },
+      "Reaction": {
+        "Code": "247472004",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Hives"
+      },
+      "Severity": {
+        "Code": "371923003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Mild to moderate"
+      },
+      "Status": {
+        "Code": "55561003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Active"
+      }
+    }
+  ],
+  "EncountersText": "<table border=\"1\" width=\"100%\"><thead><tr><th>Encounter</th><th>Performer</th><th>Location</th><th>Date</th></tr></thead><tbody><tr><td>&#xD;\n                               Pnuemonia<content ID=\"Encounter1\"/></td><td>Dr Henry Seven</td><td>Community Health and Hospitals</td><td>20120806</td></tr></tbody></table>",
+  "Encounters": [
+    {
+      "Type": {
+        "Code": "99222",
+        "CodeSystem": "2.16.840.1.113883.6.12",
+        "CodeSystemName": "CPT",
+        "Name": "InPatient Admission"
+      },
+      "Providers": [
+        {
+          "Role": {
+            "Code": "59058001",
+            "CodeSystem": "2.16.840.1.113883.6.96",
+            "CodeSystemName": "SNOMED CT",
+            "Name": "General Physician"
+          },
+          "Address": null
+        }
+      ],
+      "Locations": [
+        {
+          "Address": {
+            "StreetAddress": "1002 Healthcare Dr",
+            "City": "Portland",
+            "State": "OR",
+            "Country": "US",
+            "ZIP": "97266"
+          },
+          "Type": {
+            "Code": "1160-1",
+            "CodeSystem": "2.16.840.1.113883.6.259",
+            "CodeSystemName": "HealthcareServiceLocation",
+            "Name": "Urgent Care Center"
+          },
+          "Name": "Community Health and Hospitals"
+        }
+      ],
+      "Diagnosis": [
+        {
+          "Code": "233604007",
+          "CodeSystem": "2.16.840.1.113883.6.96",
+          "Name": "Pneumonia"
+        }
+      ],
+      "ReasonForVisit": [
+        {
+          "Code": "233604007",
+          "CodeSystem": "2.16.840.1.113883.6.96",
+          "Name": "Pneumonia"
+        }
+      ],
+      "DateTime": "2012-08-06T00:00:00.000Z"
+    }
+  ],
+  "ImmunizationText": "<root><content ID=\"immunSect\"/><table border=\"1\" width=\"100%\"><thead><tr><th>Vaccine</th><th>Date</th><th>Status</th></tr></thead><tbody><tr><td>Influenza virus vaccine, IM<content ID=\"immun2\"/></td><td>May 2012</td><td>Completed</td></tr><tr><td>Tetanus and diphtheria toxoids, IM<content ID=\"immun4\"/></td><td>Apr 2012</td><td>Completed</td></tr></tbody></table></root>",
+  "Immunizations": [
+    {
+      "Dose": {
+        "Quantity": "50",
+        "Units": "mcg"
+      },
+      "Route": {
+        "Code": "C28161",
+        "CodeSystem": "2.16.840.1.113883.3.26.1.1",
+        "CodeSystemName": "National Cancer Institute (NCI) Thesaurus",
+        "Name": "Intramuscular injection"
+      },
+      "Product": {
+        "Code": "88",
+        "CodeSystem": "2.16.840.1.113883.6.59",
+        "CodeSystemName": "CVX",
+        "Name": "Influenza virus vaccine",
+        "Manufacturer": "Health LS - Immuno Inc."
+      },
+      "DateTime": "2012-05-10T00:00:00.000Z"
+    },
+    {
+      "Dose": {
+        "Quantity": "50",
+        "Units": "mcg"
+      },
+      "Route": {
+        "Code": "C28161",
+        "CodeSystem": "2.16.840.1.113883.3.26.1.1",
+        "CodeSystemName": "National Cancer Institute (NCI) Thesaurus",
+        "Name": "Intramuscular injection"
+      },
+      "Product": {
+        "Code": "103",
+        "CodeSystem": "2.16.840.1.113883.6.59",
+        "CodeSystemName": "CVX",
+        "Name": "Tetanus and diphtheria toxoids - preservative free",
+        "Manufacturer": "Health LS - Immuno Inc."
+      },
+      "DateTime": "2012-04-01T00:00:00.000Z"
+    }
+  ],
+  "MedicationsText": "<table border=\"1\" width=\"100%\"><thead><tr><th>Medication</th><th>Directions</th><th>Start Date</th><th>Status</th><th>Indications</th><th>Fill Instructions</th></tr></thead><tbody><tr><td><content ID=\"Med1\">Albuterol 0.09 MG/ACTUAT inhalant solution</content></td><td>0.09 MG/ACTUAT inhalant solution, 2 puffs once</td><td>20120806</td><td>Active</td><td>Pneumonia (233604007 SNOMED CT)</td><td><content ID=\"FillIns\">Generic Substitition Allowed</content></td></tr></tbody></table>",
+  "Medications": [
+    {
+      "Dose": {
+        "Quantity": "4",
+        "Units": "mg"
+      },
+      "Route": {
+        "Code": "C38288",
+        "CodeSystem": "2.16.840.1.113883.3.26.1.1",
+        "CodeSystemName": "NCI Thesaurus",
+        "Name": "Oral"
+      },
+      "Product": {
+        "Code": "104894",
+        "CodeSystem": "2.16.840.1.113883.6.88",
+        "CodeSystemName": "RxNorm",
+        "Name": "Ondansetron 4 Mg Po Tbdp"
+      },
+      "StartDate": "2013-11-11T00:00:00.000Z",
+      "Frequency": {
+        "Period": "8",
+        "Unit": "h"
+      }
+    },
+    {
+      "Dose": {
+        "Quantity": "0.09",
+        "Units": "mg/actuat"
+      },
+      "Route": {
+        "Code": "C38216",
+        "CodeSystem": "2.16.840.1.113883.3.26.1.1",
+        "CodeSystemName": "NCI Thesaurus",
+        "Name": "RESPIRATORY (INHALATION)"
+      },
+      "Product": {
+        "Code": "573621",
+        "CodeSystem": "2.16.840.1.113883.6.88",
+        "Name": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+      },
+      "Rate": {
+        "Quantity": "90",
+        "Units": "ml/min"
+      },
+      "StartDate": "2012-08-06T00:00:00.000Z",
+      "EndDate": "2012-08-13T00:00:00.000Z",
+      "Frequency": {
+        "Period": "12",
+        "Unit": "h"
+      }
+    }
+  ],
+  "PlanOfCareText": "<table border=\"1\" width=\"100%\"><thead><tr><th>Planned Activity</th><th>Planned Date</th></tr></thead><tbody><tr><td>Consultation with Dr George Potomac for Asthma</td><td>20120820</td></tr><tr><td>Chest X-ray</td><td>20120826</td></tr><tr><td>Sputum Culture</td><td>20120820</td></tr></tbody></table>",
+  "PlanOfCare": {
+    "Orders": [
+      {
+        "Code": "624-7",
+        "CodeSystem": "2.16.840.1.113883.6.1",
+        "Name": "Sputum Culture",
+        "Status": "Request",
+        "DateTime": "2012-08-20T00:00:00.000Z"
+      }
+    ],
+    "Procedures": [
+      {
+        "Code": "168731009",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED-CT",
+        "Name": "Chest X-Ray",
+        "Status": "Request",
+        "DateTime": "2012-08-26T00:00:00.000Z"
+      }
+    ],
+    "Services": [
+      {
+        "Code": "427519008",
+        "CodeSystem": "2.16.840.1.113883.11.20.9.34",
+        "CodeSystemName": "patientEducationType",
+        "Name": "Caregiver",
+        "Status": "Intent"
+      }
+    ],
+    "Encounters": [
+      {
+        "Code": "99241",
+        "CodeSystem": "2.16.840.1.113883.6.12",
+        "CodeSystemName": "CPT",
+        "Name": "Office consultation - 15 minutes",
+        "Status": "Intent",
+        "DateTime": "2012-08-20T00:00:00.000Z"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "Dose": {
+          "Quantity": "81",
+          "Units": "milliGRAM(s)"
+        },
+        "Route": {
+          "Code": "C38288",
+          "CodeSystem": "2.16.840.1.113883.3.26.1.1",
+          "CodeSystemName": "NCI Thesaurus",
+          "Name": "ORAL"
+        },
+        "Product": {
+          "Code": "1191",
+          "CodeSystem": "2.16.840.1.113883.6.88",
+          "CodeSystemName": "RxNorm",
+          "Name": "aspirin"
+        },
+        "StartDate": "2012-10-02T00:00:00.000Z",
+        "EndDate": "2012-10-30T23:59:00.000Z",
+        "Status": "Intent"
+      }
+    ],
+    "Supplies": []
+  },
+  "ProblemsText": "<root><content ID=\"problems\"/><list listType=\"ordered\"><item><content ID=\"problem1\">Pneumonia : Status - Resolved</content></item><item><content ID=\"problem2\">Asthma : Status - Active</content></item></list></root>",
+  "Problems": [
+    {
+      "Code": "233604007",
+      "CodeSystem": "2.16.840.1.113883.6.96",
+      "Name": "Pneumonia",
+      "Category": {
+        "Code": "409586006",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Complaint"
+      },
+      "StartDate": "2012-08-06T00:00:00.000Z",
+      "EndDate": "2012-08-06T00:00:00.000Z",
+      "HealthStatus": {
+        "Code": "162467007",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Symptom Free"
+      },
+      "Status": {
+        "Code": "413322009",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Resolved"
+      }
+    },
+    {
+      "Code": "195967001",
+      "CodeSystem": "2.16.840.1.113883.6.96",
+      "Name": "Asthma",
+      "Category": {
+        "Code": "409586006",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Complaint"
+      },
+      "StartDate": "2007-01-03T00:00:00.000Z",
+      "EndDate": "2012-08-06T00:00:00.000Z",
+      "HealthStatus": {
+        "Code": "162467007",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Symptom Free"
+      },
+      "Status": {
+        "Code": "55561003",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED CT",
+        "Name": "Active"
+      }
+    }
+  ],
+  "ProceduresText": "<table border=\"1\" width=\"100%\"><thead><tr><th>Procedure</th><th>Date</th></tr></thead><tbody><tr><td><content ID=\"Proc2\">Chest X-Ray</content></td><td>8/7/2012</td></tr></tbody></table>",
+  "Procedures": {
+    "Observations": [],
+    "Procedures": [
+      {
+        "Code": "168731009",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "CodeSystemName": "SNOMED-CT",
+        "Name": "Chest X-Ray",
+        "Status": "completed",
+        "DateTime": "20120807"
+      }
+    ],
+    "Services": []
+  },
+  "ResultText": "<table><tbody><tr><td colspan=\"2\">LABORATORY INFORMATION</td></tr><tr><td colspan=\"2\">Chemistries and drug levels</td></tr><tr><td><content ID=\"result1\">HGB (M 13-18 g/dl; F 12-16 g/dl)</content></td><td>13.2</td></tr><tr><td><content ID=\"result2\">WBC (4.3-10.8 10+3/ul)</content></td><td>6.7</td></tr><tr><td><content ID=\"result3\">PLT (135-145 meq/l)</content></td><td>123 (L)</td></tr></tbody></table>",
+  "Results": [
+    {
+      "Code": "43789009",
+      "CodeSystem": "2.16.840.1.113883.6.96",
+      "CodeSystemName": "SNOMED CT",
+      "Name": "CBC WO DIFFERENTIAL",
+      "Observations": [
+        {
+          "Code": "30313-1",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "HGB",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2012-08-10T00:00:00.000Z",
+          "Value": "10.2",
+          "Units": "g/dl",
+          "ReferenceRange": "M 13-18 g/dl; F 12-16 g/dl"
+        },
+        {
+          "Code": "33765-9",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "WBC",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2012-08-10T00:00:00.000Z",
+          "Value": "12.3",
+          "Units": "10+3/ul"
+        },
+        {
+          "Code": "26515-7",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "PLT",
+          "Status": "completed",
+          "Interpretation": "L",
+          "DateTime": "2012-08-10T00:00:00.000Z",
+          "Value": "123",
+          "Units": "10+3/ul"
+        }
+      ],
+      "Status": "completed"
+    }
+  ],
+  "SocialHistoryText": "<table border=\"1\" width=\"100%\"><thead><tr><th>Social History Element</th><th>Description</th><th>Effective Dates</th></tr></thead><tbody><tr><td>&#xD;\n                               smoking<content ID=\"soc1\"/></td><td>Former Smoker (1 pack per day</td><td>20050501 to 20110227</td></tr><tr><td>&#xD;\n                               smoking<content ID=\"soc2\"/></td><td>Current Everyday Smoker 2 packs per day</td><td>20110227 - today</td></tr></tbody></table>",
+  "SocialHistory": {
+    "Observations": [
+      {
+        "Code": "230056004",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Cigarette smoking",
+        "Value": "1 pack per day"
+      },
+      {
+        "Code": "230056004",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Cigarette smoking",
+        "Value": {
+          "Code": "449868002",
+          "CodeSystem": "2.16.840.1.113883.6.96",
+          "Name": "Current Everyday Smoker"
+        }
+      }
+    ],
+    "TobaccoUse": [
+      {
+        "Code": "8517006",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Former smoker",
+        "StartDate": "2005-05-01T00:00:00.000Z",
+        "EndDate": "2011-02-27T00:00:00.000Z"
+      }
+    ],
+    "Pregnancy": []
+  },
+  "VitalSignsText": "<table border=\"1\" width=\"100%\"><thead><tr><th align=\"right\">Date / Time: </th><th>Nov 1, 2011</th><th>August 6, 2012</th></tr></thead><tbody><tr><th align=\"left\">Height</th><td><content ID=\"vit1\">69 inches</content></td><td><content ID=\"vit2\">69 inches</content></td></tr><tr><th align=\"left\">Weight</th><td><content ID=\"vit3\">189 lbs</content></td><td><content ID=\"vit4\">194 lbs</content></td></tr><tr><th align=\"left\">Blood Pressure</th><td><content ID=\"vit5\">132/86 mmHg</content></td><td><content ID=\"vit6\">145/88 mmHg</content></td></tr></tbody></table>",
+  "VitalSigns": [
+    {
+      "Observations": [
+        {
+          "Code": "8302-2",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "Height",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2008-11-01T00:00:00.000Z",
+          "Value": "69",
+          "Units": "in"
+        },
+        {
+          "Code": "3141-9",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "Patient Body Weight - Measured",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2011-11-01T00:00:00.000Z",
+          "Value": "189",
+          "Units": "lbs"
+        },
+        {
+          "Code": "8480-6",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "Intravascular Systolic",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2011-11-01T00:00:00.000Z",
+          "Value": "132",
+          "Units": "mm[Hg]"
+        }
+      ],
+      "DateTime": "2011-11-01T00:00:00.000Z"
+    },
+    {
+      "Observations": [
+        {
+          "Code": "8302-2",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "Height",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2012-08-06T00:00:00.000Z",
+          "Value": "69",
+          "Units": "in"
+        },
+        {
+          "Code": "3141-9",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "Patient Body Weight - Measured",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2012-08-06T00:00:00.000Z",
+          "Value": "194",
+          "Units": "lbs"
+        },
+        {
+          "Code": "8480-6",
+          "CodeSystem": "2.16.840.1.113883.6.1",
+          "CodeSystemName": "LOINC",
+          "Name": "Intravascular Systolic",
+          "Status": "completed",
+          "Interpretation": "N",
+          "DateTime": "2012-08-06T00:00:00.000Z",
+          "Value": "145",
+          "Units": "mm[Hg]"
+        }
+      ],
+      "DateTime": "2012-08-06T00:00:00.000Z"
+    }
+  ],
+  "Meta": {
+    "DataModel": "Clinical Summary",
+    "EventType": "Query",
+    "EventDateTime": "2016-03-10T16:09:11.594Z",
+    "Test": true,
+    "Source": {
+      "ID": "9dd3dacb-9b11-45f8-adb0-9bce4a7a0497",
+      "Name": "Redox API Endpoint"
+    },
+    "Destinations": [
+      {
+        "ID": "ef9e7448-7f65-4432-aa96-059647e9b357",
+        "Name": "Clinical Summary Endpoint"
+      }
+    ],
+    "Message": {
+      "ID": 30193016
+    },
+    "Transmission": {
+      "ID": 1002029
+    }
+  }
+}
