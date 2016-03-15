@@ -5,6 +5,7 @@
 - [Example CloudMine Server Code Snippet](#example-cloudmine-server-code-snippet)
   - [Getting Started](#getting-started)
   - [Running Snippets Locally](#running-snippets-locally)
+      - [A Note on `package.json`](#a-note-on-package.json)
       - [Obtain a Listing of Available Snippets](#obtain-a-listing-of-available-snippets)
       - [Executing a Snippet](#executing-a-snippet)
 - [Implementation Notes](#implementation-notes)
@@ -23,47 +24,65 @@
 
 # Example CloudMine Server Code Snippet
 
-This is a example of how to structure your project for running on CloudMine's PaaS.
+This is a example of how to structure your Redox project for running on CloudMine's PaaS.
 
-The `lib` folder has snippets which are just pieces of node code. The `index.js` has the important parts of the code.
+The `lib` folder has snippets which are just pieces of node code. `index.js` contains the code necessary to run your snippets in the cloud and make them accessible through CloudMine's API gateway and to make them accessible within your project.
 
 ## Getting Started
 
-1. In `index.js`, the `module.exports` call **must** occur before the `.start` method is called, otherwise Apollo will not be able to identify public snippets available for invocation. 
+1. In `index.js`, the `module.exports` call **must** occur before the `.start` method is called, otherwise Apollo will not be able to identify public snippets available for invocation.
 2. `CloudMineNode.start` requires the current scope, the root file, and has a callback to let you know when the package is ready for inbound requests.
 
 ## Running Snippets Locally
 
-In order to run your CloudMine Snippets locally, please follow the below instructions. 
+In order to run your CloudMine Snippets locally, please follow the below instructions.
 
-1. Ensure that all NPM module dependencies are defined in `package.json`. 
-2. Run `npm install` from the root directory to ensure that the dependencies are included into the project. 
+1. Ensure that all NPM module dependencies are defined in `package.json`.
+2. Run `npm install` from the root directory to ensure that the dependencies are included into the project.
 3. Next, run `node index.js` to start the server.
 4. Finally, `curl`, `wget`, or use your favorite method of running HTTP commands using the below examples.
 
+#### A Note on `package.json`
+
+The only dependency necessary for your CodeRunner project to run on CloudMine is the `cloudmine-servercode` module. Make sure that this dependency is setup correctly within your `package.json`:
+
+```
+"dependencies": {
+  "cloudmine-servercode" : "cloudmine/node-coderunner"
+}
+```
+
+After you make sure that this is properly referenced, you can use the `package.json` file to import `npm` dependencies as you would in any oder `node.js` project. To include the packages in your project, simply add a
+
+```
+var module = require('MODULE_NAME')
+```
+
+line to any file in which you'd like to use them.
+
 #### Obtain a Listing of Available Snippets
 
-Request: 
+Request:
 
 `localhost:4545/names`
 
-Response: 
+Response:
 
-`["basic","async"]`
+`["redox"]`
 
 #### Executing a Snippet
- 
+
 Request:
 
-`localhost:4545/code/basic`
+`localhost:4545/code/redox`
 
 Response:
 
-`{"success":"Basic was called"}`
- 
+This snippet will respond with a message notifying of the objects you've created or updated.
+
 # Implementation Notes
 
-Historically, CloudMine snippets use the `data` environment variable, and the `exit` function in order to reply to inbound requests. With Apollo, both a new environment variable and exit function will be introduces: `req` and `reply`, respectively. 
+Historically, CloudMine snippets use the `data` environment variable, and the `exit` function in order to reply to inbound requests. With Apollo, both a new environment variable and exit function will be introduces: `req` and `reply`, respectively.
 
 
 ### 1. Accessing environment details via the `req	` variable
@@ -126,17 +145,17 @@ if(isCloud){
 }
 else{
     console.log("IsLocal!");
-    //Configure appropriate environment details 
+    //Configure appropriate environment details
 }
 ```
 
 ### 2. Replying to API requests via the `reply` function
 
-There are two types of values that may be passed into the `reply` function: Strings and Ints as well as JSON objects. 
+There are two types of values that may be passed into the `reply` function: Strings and Ints as well as JSON objects.
 
-#### Replying with a String or Integer 
+#### Replying with a String or Integer
 
-When using the `reply` function with only a `String` or `Integer`, the value will be returned as part of the `result` key. 
+When using the `reply` function with only a `String` or `Integer`, the value will be returned as part of the `result` key.
 
 Example:
 
@@ -166,9 +185,9 @@ or
 }
 ```
 
-#### Replying with a JSON Object 
+#### Replying with a JSON Object
 
-When replying with a JSON shape, the contents of the object will be nested within the `result` shape. 
+When replying with a JSON shape, the contents of the object will be nested within the `result` shape.
 
 Example:
 
@@ -178,7 +197,7 @@ setTimeout(function() {
   }, 5000);
 ```
 
-Output:
+Output (after 5 seconds):
 
 ```
 {
@@ -199,7 +218,11 @@ To help with this process, we have included a ZIP CLI example below:
 
 `zip -r code.zip code-folder/ -x *.git* -x *node_modules*`
 
-**Notes**
+However, you can also navigate to your root folder through `Finder` on Mac, or your OS's equivalent, right-click the file, and compress it.
+
+With your compressed folder, navigate to the `Logic Engine` section of the CloudMine Developer Dashboard (`Compass`), and drag your .zip file into the upload pane.
+
+**Note:**
 
 1. `code.zip` refers to the final package name
 2. `code-folder` refers to the root folder of the package
